@@ -30,6 +30,9 @@ class Tree:
                 current = current.right
 
     def equal(self, other):
+        if other is None:
+            return False
+
         return Tree.__equal(self.root, other.root)
 
     @staticmethod
@@ -55,4 +58,5 @@ tree2.insert(7)
 tree2.insert(1)
 tree2.insert(8)
 
+print(tree1.equal(None))
 print(tree1.equal(tree2))
